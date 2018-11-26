@@ -1,7 +1,5 @@
 # Creating a slack like App using React
 
-  
-
 1. Mock data
 2. LeftBar
 3. MainView
