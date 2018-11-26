@@ -1,8 +1,18 @@
 import Conversation from '../Models/Conversation';
 import Participant from '../Models/Participant';
+import Message from '../Models/Message';
 
+const Florence = new Participant('Florence');
+const Erwan = new Participant('Erwan');
 const conversation1 = new Conversation();
-conversation1.addParticipant(new Participant('Florence'));
+conversation1
+  .addParticipant(Florence)
+  .addMessage(new Message(Florence, 'Coucou'))
+  .addMessage(new Message(Erwan, 'Heeeeey'))
+  .addMessage(new Message(Erwan, 'asv?'))
+  .addMessage(new Message(Florence, '????????'))
+;
+
 
 const conversation2 = new Conversation();
 conversation2.addParticipant(new Participant('Edwin'));
