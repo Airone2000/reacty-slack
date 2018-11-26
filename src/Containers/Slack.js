@@ -1,4 +1,6 @@
 import React from 'react';
+import LeftBar from '../Presentational/LeftBar';
+import Conversation from '../Presentational/Conversation';
 
 class Slack extends React.Component
 {
@@ -8,8 +10,9 @@ class Slack extends React.Component
 
   render() {
     return (
-      <div className="slack">
-        SLACK
+      <div className="Slack">
+        <LeftBar />
+        <Conversation />
       </div>
     );
   }

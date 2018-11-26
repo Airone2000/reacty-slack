@@ -2,7 +2,7 @@ import React from 'react';
 
 function LeftBar() {
   return (
-    <div>
+    <div className="LeftBar">
       <nav>
         <ul>
           <li>ELEMENT</li>

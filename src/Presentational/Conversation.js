@@ -2,7 +2,7 @@ import React from 'react';
 
 function Conversation() {
   return (
-    <div className="conversation">
+    <div className="Conversation">
       CONVERSATION
     </div>
   );
