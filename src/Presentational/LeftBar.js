@@ -1,7 +1,7 @@
 import React from 'react';
 import {ConversationContext} from '../Containers/Slack';
 
-function LeftBar() {
+function LeftBar({onSelectConversation, selectedConversation}) {
   return (
     <ConversationContext.Consumer>
       {(conversations) => (
@@ -10,7 +10,11 @@ function LeftBar() {
             <ul>
               {
                 conversations.map(conversation => (
-                  <li key={conversation.id}>
+                  <li 
+                    key={conversation.id}
+                    onClick={() => onSelectConversation(conversation)}
+                    className={selectedConversation === conversation ? 'selected' : null}
+                  >
                     {conversation.participants[0].nickname}
                   </li>
                 ))

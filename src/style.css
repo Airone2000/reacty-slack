@@ -38,9 +38,18 @@ body
 {
   color: #fff;
   padding: 3px;
+  margin: 5px 0;
 }
 
-.LeftBar ul li:hover
+.LeftBar ul li.selected
+{
+  background-color: #ED7F10;
+  color: #fff;
+  text-align:center;
+  cursor: default;
+}
+
+.LeftBar ul li:not(.selected):hover
 {
   background-color: #fff;
   color: #333;
