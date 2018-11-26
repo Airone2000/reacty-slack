@@ -1,9 +1,12 @@
 import React from 'react';
+import MessageList from './MessageList';
+import MessageInput from './MessageInput';
 
-function Conversation() {
+function Conversation({selectedConversation}) {
   return (
     <div className="Conversation">
-      CONVERSATION
+      <MessageList messages={selectedConversation.messages} />
+      <MessageInput />
     </div>
   );
 }

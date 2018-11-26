@@ -10,4 +10,4 @@ class Message
   }
 }
 
-export default Participant;
+export default Message;

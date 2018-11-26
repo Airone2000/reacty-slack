@@ -1,9 +1,10 @@
 import React from 'react';
 
-function MessageListItem() {
+function MessageListItem({message}) {
   return (
-    <div class="message">
-      MESSAGE
+    <div>
+      <strong>{message.author.nickname} says:</strong>
+      <p>{message.message}</p>
     </div>
   );
 }

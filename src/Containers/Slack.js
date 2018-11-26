@@ -18,7 +18,6 @@ class Slack extends React.Component
   }
 
   handleSelectConversation(conversation) {
-    console.log('SELECTED CONVERSATION', conversation);
     this.setState({
       selectedConversation: conversation
     });
@@ -32,7 +31,11 @@ class Slack extends React.Component
             onSelectConversation={this.handleSelectConversation}
             selectedConversation={this.state.selectedConversation}
           />
-          <Conversation />
+          {this.state.selectedConversation && (
+            <Conversation
+              selectedConversation={this.state.selectedConversation}
+            />
+          )}
         </div>
       </ConversationContext.Provider>
     );
