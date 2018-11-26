@@ -10,12 +10,15 @@ function MessageInput({onNewMessage}) {
   return (
     <form onSubmit={(event) => {
       event.preventDefault();
-      let messageText = inputRef.current.value;
-      const message = new Message(ERWAN, messageText);
-      onNewMessage(message);
-      inputRef.current.value = '';
+      let messageText = inputRef.current.value.trim();
+      if(messageText.length > 0) {
+        const message = new Message(ERWAN, messageText);
+        onNewMessage(message);
+        inputRef.current.value = '';
+      }
     }}>
-      <input 
+      <input
+        className="MessageInput"
         type="text" 
         placeholder="Type your message..."
         ref={inputRef}
