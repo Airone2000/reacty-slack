@@ -1,6 +1,7 @@
 *
 {
   box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 html,body, #root
@@ -31,6 +32,19 @@ body
 {
   padding: 0;
   list-style: none;
+}
+
+.LeftBar ul li
+{
+  color: #fff;
+  padding: 3px;
+}
+
+.LeftBar ul li:hover
+{
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
 }
 
 .Conversation

@@ -1,14 +1,25 @@
 import React from 'react';
+import {ConversationContext} from '../Containers/Slack';
 
 function LeftBar() {
   return (
-    <div className="LeftBar">
-      <nav>
-        <ul>
-          <li>ELEMENT</li>
-        </ul>
-      </nav>
-    </div>
+    <ConversationContext.Consumer>
+      {(conversations) => (
+        <div className="LeftBar">
+          <nav>
+            <ul>
+              {
+                conversations.map(conversation => (
+                  <li key={conversation.id}>
+                    {conversation.participants[0].nickname}
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+      )}
+    </ConversationContext.Consumer>
   );
 }
 
